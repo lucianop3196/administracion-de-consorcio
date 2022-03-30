@@ -1,8 +1,8 @@
 {
-  "name": "administracion-de-consorcio",
+  "name": "mas-conciencia",
   "version": "1.0.0",
   "private": true,
-  "description": "Administracion de consorcio",
+  "description": "Proyecto para generar concientización respecto a las colillas de cigarrillos y su contaminación en el medio ambiente",
   "author": "Luciano Pennacchioni",
   "keywords": [
     "gatsby"
@@ -15,10 +15,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "gatsby": "^4.3.0",
     "gatsby-plugin-image": "^2.3.0",
+    "gatsby-plugin-mdx": "^3.11.0",
     "gatsby-plugin-sharp": "^4.3.0",
-    "gatsby-source-filesystem": "^4.3.0",
+    "gatsby-source-filesystem": "^4.11.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
