@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 // markup
 const IndexPage = () => {
+  
   return (
     <Layout pageTitle="Inicio">
       <p>Sitio web para Julian Tujague</p>
