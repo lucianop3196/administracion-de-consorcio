@@ -1,18 +1,16 @@
 import React from "react";
 import { GoogleMap, Marker } from "react-google-maps";
-import * as markersData from "../../../json/markersData.json";
+import {markers} from "../../../json/markersData.json";
 
 export default function Map() {
-  console.log('markersData', markersData.markers)
+  console.log('markersData',markers)
   return (
     <div>
       <GoogleMap
         defaultZoom={14}
         defaultCenter={{ lat: -34.86814466586775, lng: -61.52956740373243 }}
       >
-        {/* <Marker position={{ lat: -34.397, lng: 150.644 }} /> */}
-        
-        {markersData?.markers.map((marker, i) => (
+        {markers?.map((marker, i) => (
           <Marker
             key={i}
             position={{
