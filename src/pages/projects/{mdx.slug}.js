@@ -9,7 +9,7 @@ import Map from "../../components/Map/map";
 
 const ProjectPost = ({ data }) => {
   const WrappedMap = withScriptjs(withGoogleMap(Map));
-  console.log("apikey",process.env.REACT_GOOGLE_MAPS_STATIC_API_KEY );
+  console.log("apikey",process.env.GATSBY_MAP_API_KEY );
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>Fecha: {data.mdx.frontmatter.date}</p>
