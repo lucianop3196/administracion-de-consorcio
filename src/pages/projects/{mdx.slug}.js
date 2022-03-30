@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql } from 'gatsby' //Para hacer las queries
 import { MDXRenderer } from 'gatsby-plugin-mdx' //Para poder renderizar el body del mdx
 import Layout from "../../components/Layout/layout";
+// import Map from "../../components/Map/map";
 
 // El componente recibe automaticamente por props el id del nodo mdx correspondiente al proyecto en este caso
 
@@ -10,6 +11,7 @@ const ProjectPost = ({pageContext, data}) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>Fecha: {data.mdx.frontmatter.date}</p>
+      {/* <Map/> */}
       <MDXRenderer>
         {data.mdx.body}
       </MDXRenderer>
