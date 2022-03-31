@@ -1,6 +1,7 @@
 import * as React from "react";
 import Layout from "../components/Layout/layout";
 import { StaticImage } from "gatsby-plugin-image";
+import "./index.css";
 
 // markup
 const IndexPage = () => {
