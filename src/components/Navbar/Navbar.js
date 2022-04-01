@@ -15,6 +15,7 @@ const pages = [
   { title: "Inicio", route: "/" },
   { title: "Sobre Nosotros", route: "/about" },
   { title: "Proyectos", route: "/projects" },
+  { title: "Sumate", route: "/joinUs" },
 ];
 
 const Navbar = () => {
@@ -113,6 +114,9 @@ const Navbar = () => {
                 to={page.route}
                 style={{ textDecoration: "none" }}
               >
+                  {/*
+                    Para cambiar la font-family...
+                  https://stackoverflow.com/questions/48319372/changing-font-family-of-all-mui-components */}
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
@@ -122,7 +126,6 @@ const Navbar = () => {
                     mx: 4,
                     color: "primary.main",
                   }}
-                //   classes={"focusVisible"}
                 >
                   {page.title}
                 </Button>

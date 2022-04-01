@@ -3,7 +3,6 @@ import { GoogleMap, Marker } from "react-google-maps";
 import {markers} from "../../../json/markersData.json";
 
 export default function Map() {
-  console.log('markersData',markers)
   return (
     <div>
       <GoogleMap
