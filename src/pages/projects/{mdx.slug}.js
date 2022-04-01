@@ -9,17 +9,17 @@ import Map from "../../components/Map/map";
 
 const ProjectPost = ({ data }) => {
   const WrappedMap = withScriptjs(withGoogleMap(Map));
-  console.log("apikey",process.env.GATSBY_MAP_API_KEY );
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p>Fecha: {data.mdx.frontmatter.date}</p>
+    <Layout>
+      <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      <p>Puntos de colectores en Lincoln:</p>
       <WrappedMap
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.GATSBY_MAP_API_KEY}`}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `400px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
+        // year={"333"}
       />
-      <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </Layout>
   );
 };
@@ -30,8 +30,8 @@ export const project = graphql`
     mdx(id: { eq: $id }) {
       body
       frontmatter {
-        date
         title
+        subtitle
       }
       id
       slug

@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "Municipalidad de Lincoln",
+    title: "Mas Conciencia",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -18,5 +18,8 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
+    {
+      resolve: 'gatsby-plugin-mdx-frontmatter'
+    }
   ],
 };

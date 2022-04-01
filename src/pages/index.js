@@ -3,9 +3,8 @@ import Layout from "../components/Layout/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import "./index.css";
 
-// markup
+// Este componente será un carrusel de fotos.
 const IndexPage = () => {
-  
   return (
     <Layout pageTitle="Inicio">
       <p>Sitio web para Julian Tujague</p>

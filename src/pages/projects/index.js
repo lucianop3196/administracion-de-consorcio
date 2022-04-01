@@ -10,7 +10,7 @@ const ProjectPage = ({ data }) => {
           <h2>
             <Link to={`/projects/${node.slug}`}>{node.frontmatter.title}</Link>
           </h2>
-          <p>Actualizado: {node.frontmatter.date}</p>
+          <p>{node.frontmatter.subtitle}</p>
         </article>
       ))}
     </Layout>
@@ -19,11 +19,11 @@ const ProjectPage = ({ data }) => {
 
 export const projects = graphql`
   {
-    allMdx(sort: { fields: frontmatter___date, order: ASC }) {
+    allMdx{
       nodes {
         frontmatter {
           title
-          date
+          subtitle
         }
         slug
         id
